@@ -1,0 +1,41 @@
+<nav data-th-fragment="navbar" class="bg-blue-700 text-white px-6 py-3 flex justify-between items-center shadow-md fixed top-0 w-full z-50">
+
+    <!-- Left Side: Logo/Home -->
+    <div class="flex items-center gap-6">
+
+        <!-- Nav Links -->
+        <div class="hidden md:flex gap-4">
+            <a th:href="@{/}" class="hover:text-gray-200 transition-colors">Home</a>
+            <a th:href="@{/services}" class="hover:text-gray-200 transition-colors">Services</a>
+            <a th:href="@{/about}" class="hover:text-gray-200 transition-colors">About</a>
+            <a th:href="@{/contact}" class="hover:text-gray-200 transition-colors">Contact</a>
+        </div>
+    </div>
+
+    <!-- Center: Title -->
+    <h1 class="text-xl font-semibold tracking-wide">Quiz Application</h1>
+
+    <!-- Right Side: Auth -->
+    <div class="flex items-center gap-4">
+        <!-- If user is NOT logged in -->
+        <!-- <div th:if="${not #authorization.expression('isAuthenticated()')}"> -->
+            <a th:href="@{/login}" class="px-4 py-2 rounded-lg bg-blue-600 hover:bg-blue-500 transition">Login</a>
+            <a th:href="@{/signup}" class="px-4 py-2 rounded-lg bg-green-600 hover:bg-green-500 transition">Sign Up</a>
+        <!-- </div> -->
+
+        <!-- If user IS logged in -->
+        <!-- <div th:if="${#authorization.expression('isAuthenticated()')}" class="relative"> -->
+            <!-- <button class="flex items-center gap-2 focus:outline-none">
+                <img th:src="${user.profilePicUrl}" alt="Profile" class="w-9 h-9 rounded-full border-2 border-white">
+                <span th:text="${user.username}" class="hidden md:inline"></span>
+            </button> -->
+
+            <!-- Dropdown -->
+            <!-- <div class="absolute right-0 mt-2 w-40 bg-white text-black rounded-lg shadow-lg hidden group-hover:block">
+                <a th:href="@{/profile}" class="block px-4 py-2 hover:bg-gray-100">Profile</a>
+                <a th:href="@{/logout}" class="block px-4 py-2 hover:bg-gray-100">Logout</a>
+            </div> -->
+        <!-- </div> -->
+    </div>
+
+</nav>

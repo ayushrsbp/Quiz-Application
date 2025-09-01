@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{base :: parent(~{::#content})}">
+
+<section id="content" class="w-full flex flex-col items-center justify-center gap-12 py-16">
+
+    <!-- Welcome Section -->
+    <div class="text-center max-w-3xl">
+        <h2 class="text-4xl font-bold text-gray-800 mb-4">Welcome to the Quiz Application</h2>
+        <p class="text-gray-600 text-lg leading-relaxed">
+            Our Quiz Application helps mentors create engaging quizzes and allows students to 
+            participate in a fun, interactive, and competitive way. Build teams, schedule quizzes, 
+            and track performance — all in one place.
+        </p>
+    </div>
+
+    <!-- About Features Section -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-5xl mt-8">
+        <div class="bg-white p-6 rounded-xl shadow-md text-center">
+            <h3 class="text-xl font-semibold mb-2 text-blue-700">Organize</h3>
+            <p class="text-gray-600">Mentors can easily create and schedule quizzes for their teams.</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-md text-center">
+            <h3 class="text-xl font-semibold mb-2 text-green-700">Participate</h3>
+            <p class="text-gray-600">Students can join multiple teams and take part in quizzes effortlessly.</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-md text-center">
+            <h3 class="text-xl font-semibold mb-2 text-purple-700">Track Progress</h3>
+            <p class="text-gray-600">Monitor quiz scores, team rankings, and personal performance analytics.</p>
+        </div>
+    </div>
+
+    <!-- Get Started Button -->
+    <div class="mt-10">
+        <a th:href="@{/home}" 
+           class="px-8 py-3 text-lg font-semibold bg-blue-600 text-white rounded-xl shadow-lg hover:bg-blue-500 transition duration-300">
+            Get Started →
+        </a>
+    </div>
+
+</section>
+</html>
